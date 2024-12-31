@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-50511418-3"
+    ></script>
+    <script>
+      if ('%NODE_ENV%' === 'production') {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-50511418-3');
+      }
+    </script>
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#293241" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Puzzle</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <audio id="sound-tile" preload="auto">
+      <source src="%PUBLIC_URL%/audio/tile.wav" type="audio/wav" />
+    </audio>
+  </body>
+</html>

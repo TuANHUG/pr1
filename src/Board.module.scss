@@ -1,0 +1,118 @@
+@import 'constants.scss';
+
+$breakPoint: 800px;
+
+.title,
+.controlHeader {
+  color: $colorContrast;
+  letter-spacing: 1px;
+  padding: $gutterSm;
+  
+}
+
+.title {
+  font-size: $fontSizeXl;
+  color:$colorContrast;
+  margin: 0 0 $gutterLg;
+}
+
+.wrapper {
+  @include centerChildren();
+  flex-wrap: wrap; 
+}
+
+.board {
+  margin-bottom: $gutterLg;
+}
+
+.row {
+  display: flex;
+}
+
+.tile {
+  background-repeat: no-repeat;
+  user-select: none;
+
+  border: 1px solid transparent; 
+  &.nonEmpty {
+    border: 1px solid $colorContrast;
+    cursor: pointer;
+  }
+
+  @include centerChildren();
+  & > .number {
+    color: $colorContrast;
+    font-size: $fontSizeXl;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  transition: transform $transition;
+  &.slideUp {
+    transform: translateY(-100%);
+  }
+  &.slideDown {
+    transform: translateY(100%);
+  }
+  &.slideLeft {
+    transform: translateX(-100%);
+  }
+  &.slideRight {
+    transform: translateX(100%);
+  }
+}
+
+@media (min-width: $breakPoint) {
+  .controls {
+    margin-left: $gutterLg;
+  }
+}
+
+.controlHeader {
+  display: inline-block;
+  font-size: $fontSizeSm;
+  margin-bottom: $gutterMd;
+}
+
+.controlMainRow {
+  display: flex;
+}
+
+.control {
+  font-size: $fontSizeMd;
+  margin-bottom: $gutterMd;
+  @include marginRightUnlessLast($gutterMd);
+  &.main {
+    flex: 1;
+    height: 100px;
+    font-size: $fontSizeLg;
+  }
+  &.warning {
+    background-color: $colorWarning;
+  }
+  &.setting svg {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+  }
+}
+
+.footer {
+  font-size: $fontSizeXs;
+  margin-bottom: $gutterMd;
+  svg {
+    margin-right: 4px;
+    width: $fontSizeXs;
+    height: $fontSizeXs;
+  }
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $colorContrast;
+    text-decoration: none;
+    @include marginRightUnlessLast($gutterMd);
+  }
+  a:hover {
+    color: $colorSecondary;
+  }
+}

@@ -1,0 +1,36 @@
+@import 'constants.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+
+.uploadInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+
+  & + label {
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: $gutterMd;
+  }
+}
+
+.uploadButton {
+  pointer-events: none; 
+  margin-bottom: 0 !important;
+
+  .uploadInput + label:hover & {
+   
+  }
+
+  .uploadInput:focus + label & {
+    outline: none;
+    border-color: $colorSecondary;
+  }
+}

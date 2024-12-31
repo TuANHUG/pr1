@@ -1,0 +1,34 @@
+.button {
+  display: inline-block;
+  padding: 12px 24px; 
+  font-size: 16px; 
+  font-weight: bold;
+  text-transform: uppercase; 
+  letter-spacing: 1.5px;
+
+  background:  #3498db; 
+  color: #ffffff;
+  border: none;
+  border-radius: 25px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+
+  transition: all 0.3s ease-in-out; 
+
+  &:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  }
+
+  &:disabled {
+    background: linear-gradient(45deg, #bdc3c7, #7f8c8d); 
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+}

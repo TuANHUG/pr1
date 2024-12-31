@@ -1,0 +1,12 @@
+@import 'constants.scss';
+
+.app {
+  text-align: center;
+  background-color: $colorBackground;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: $gutterLg;
+
+  @include centerChildren();
+  flex-direction: column;
+}

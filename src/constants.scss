@@ -1,0 +1,47 @@
+$colorMain: #A5CAD2;
+$colorSecondary: #FF7B89;
+$colorContrast: #edf2f4;
+$colorBackground: #6F5F90;
+$colorWarning: #ab3428;
+
+$fontSizeXs: 12px;
+$fontSizeSm: 16px;
+$fontSizeMd: 20px;
+$fontSizeLg: 28px;
+$fontSizeXl: 34px;
+
+$numberSize: 50px;
+$transition: 250ms;
+
+$gutterSm: 8px;
+$gutterMd: 16px;
+$gutterLg: 24px;
+
+$zIndexModal: 10;
+
+@mixin marginBottomUnlessLast($margin) {
+  &:not(:last-child) {
+    margin-bottom: $margin;
+  }
+}
+
+@mixin marginRightUnlessLast($margin) {
+  &:not(:last-child) {
+    margin-right: $margin;
+  }
+}
+
+@mixin centerChildren() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
